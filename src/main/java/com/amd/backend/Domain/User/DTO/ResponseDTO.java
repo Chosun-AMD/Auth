@@ -83,7 +83,7 @@ public class ResponseDTO<T> {
         }
 
         public String toString() {
-            return "ResponseDTO.ResponseDTOBuilder(success=" + this.success + ", status = " + this.status + ", data = " + this.data + " , erroeMessages = " + this.erroeMessage + ")";
+            return "ResponseDTO.ResponseDTOBuilder(success=" + this.success + ", status = " + this.status + ", data = " + this.data + " , errorMessages = " + this.erroeMessage + ")";
         }
     }
 }

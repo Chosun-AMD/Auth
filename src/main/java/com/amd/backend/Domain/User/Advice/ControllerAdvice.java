@@ -13,13 +13,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.List;
 
 /**
- * 예외 처리를 위한 Controller Advice입니다.
+ * 예외 처리를 위한 ControllerAdvice입니다.
  * @author : 황시준
  * @since : 1.0
  */
 @Slf4j
 @RestControllerAdvice
 public class ControllerAdvice {
+    /*
     @ExceptionHandler(InvalidAuthorizationHeaderException.class)
     public ResponseEntity<ResponseDTO<Object>> handleInvalidAuthorizationHeaderException(Exception e){
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(
@@ -30,7 +31,7 @@ public class ControllerAdvice {
                         .build()
         );
     }
-
+    */
     @ExceptionHandler(InvalidTokenException.class)
     public ResponseEntity<ResponseDTO<Object>> handleInvalidTokenException(Exception e){
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(
