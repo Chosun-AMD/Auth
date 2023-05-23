@@ -4,24 +4,14 @@ import com.amd.backend.Domain.User.DTO.*;
 import com.amd.backend.Domain.User.Entity.UserEntity;
 import com.amd.backend.Domain.User.Repository.UserRepository;
 import com.amd.backend.Global.Config.JWT.Token.TokenProvider;
-import com.amd.backend.Global.Result.Exception.RefreshTokenInvalidException;
-import com.amd.backend.Global.Result.Exception.UserAlreadyLogoutException;
 import com.amd.backend.Global.Result.Exception.UserEmailAlreadyExistsException;
 import com.amd.backend.Global.Result.Exception.UserNameAlreadyExistsException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.coyote.Response;
-import org.modelmapper.ModelMapper;
-import org.modelmapper.convention.MatchingStrategies;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.security.auth.RefreshFailedException;
-import java.util.Date;
-import java.util.UUID;
 
 /**
  * 인증관련 서비스들을 저장한 클래스입니다.
@@ -71,5 +61,4 @@ public class AuthService {
         UserEntity save = userRepository.save(userEntity);
         return ResponseUserDTO.of(save);
     }
-
 }
