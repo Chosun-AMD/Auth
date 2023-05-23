@@ -4,7 +4,7 @@
 - 현재 구현된 기능은 다음과 같습니다.
 
 1. 회원가입
-> ![img.png](img.png)
+![image](https://github.com/Chosun-AMD/Auth/assets/54488922/a8dd40bc-2d46-4a3b-80ef-748db0b6164c)
 2. 로그인
 > ![img_1.png](img_1.png)  
 > 위를 보면 로그인하게 되면 `token`과 `userId`가 헤더에 담겨 전송됩니다.
