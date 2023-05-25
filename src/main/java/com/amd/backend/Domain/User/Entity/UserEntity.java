@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.UUID;
 
 /**
  * JPA Database 요소를 만드는 Entity입니다/
@@ -20,7 +19,7 @@ import java.util.UUID;
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+     private Long id;
 
     @Column(nullable = false, length=50, unique = true)
     private String email;
